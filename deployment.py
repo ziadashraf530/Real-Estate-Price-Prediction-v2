@@ -3,17 +3,8 @@ import pickle
 import json
 import numpy as np
 
-
-import os
-import pickle
-
-# Get the current directory of the script
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Construct the full path to the pickle file
-model_path = os.path.join(BASE_DIR, 'banglore_home_prices_model.pickle')
-
-with open(model_path, 'rb') as f:
+# Load the trained model
+with open('banglore_home_prices_model.pickle', 'rb') as f:
     model = pickle.load(f)
 
 # Load column information
